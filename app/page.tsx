@@ -796,43 +796,166 @@ export default function Home() {
 
       </section>
 
-      {/* SIMPLE FOOTER */}
+{/* FOOTER */}
 
-      <footer className="relative z-10 border-t border-white/5 bg-black/40">
+<footer className="relative z-10 border-t border-[#0f9f9c]/10 px-4 py-14">
 
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 text-center sm:flex-row sm:px-8 sm:text-left">
+  <div className="mx-auto w-full max-w-6xl">
 
-          <div className="flex items-center gap-3">
+    {/* RELATED TOOLS */}
 
-            <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-blue-400/20">
-              <img
-                src="/logo.png"
-                alt="KrishAIWorks"
-                className="h-full w-full rounded-full object-cover"
-              />
-            </div>
+    <div className="mb-12">
 
-            <div>
+      <div className="mx-auto max-w-2xl text-center">
 
-              <p className="text-sm font-semibold text-white">
-                KrishAIWorks
-              </p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#0f9f9c]">
+          Explore More
+        </p>
 
-              <p className="text-xs text-zinc-600">
-                AI Solutions That Work
-              </p>
+        <h2 className="mt-3 text-2xl font-bold text-white sm:text-3xl">
+          More AI Writing Tools
+        </h2>
 
-            </div>
+        <p className="mt-3 text-sm leading-7 text-zinc-500">
+          Explore more AI-powered tools to write, improve and manage
+          your emails and professional content.
+        </p>
+
+      </div>
+
+      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        {/* AI EMAIL WRITER */}
+
+        <a
+          href="https://aiemailwriter.krishaiworks.com/"
+          className="group rounded-2xl border border-white/5 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-[#0f9f9c]/20 hover:bg-[#0f9f9c]/[0.03]"
+        >
+
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#0f9f9c]/10 bg-[#0f9f9c]/10 text-lg">
+            ✉️
+          </div>
+
+          <h3 className="mt-4 text-sm font-semibold text-white transition group-hover:text-[#0f9f9c]">
+            AI Email Writer
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-zinc-500">
+            Write clear and professional emails quickly with AI.
+          </p>
+
+        </a>
+
+        {/* AI GRAMMAR & WRITING FIXER */}
+
+        <a
+          href="https://aigrammarwritingfixer.krishaiworks.com/"
+          className="group rounded-2xl border border-white/5 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-[#0f9f9c]/20 hover:bg-[#0f9f9c]/[0.03]"
+        >
+
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#0f9f9c]/10 bg-[#0f9f9c]/10 text-lg">
+            ✍️
+          </div>
+
+          <h3 className="mt-4 text-sm font-semibold text-white transition group-hover:text-[#0f9f9c]">
+            AI Grammar & Writing Fixer
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-zinc-500">
+            Fix grammar, spelling and improve your writing with AI.
+          </p>
+
+        </a>
+
+        {/* AI TEXT HUMANIZER */}
+
+        <a
+          href="https://aitexthumanizer.krishaiworks.com/"
+          className="group rounded-2xl border border-white/5 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-[#0f9f9c]/20 hover:bg-[#0f9f9c]/[0.03]"
+        >
+
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#0f9f9c]/10 bg-[#0f9f9c]/10 text-lg">
+            ✨
+          </div>
+
+          <h3 className="mt-4 text-sm font-semibold text-white transition group-hover:text-[#0f9f9c]">
+            AI Text Humanizer
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-zinc-500">
+            Make AI-generated text sound natural and human.
+          </p>
+
+        </a>
+
+        {/* AI COVER LETTER GENERATOR */}
+
+        <a
+          href="https://aicoverlettergenerator.krishaiworks.com/"
+          className="group rounded-2xl border border-white/5 bg-white/[0.025] p-5 transition hover:-translate-y-1 hover:border-[#0f9f9c]/20 hover:bg-[#0f9f9c]/[0.03]"
+        >
+
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#0f9f9c]/10 bg-[#0f9f9c]/10 text-lg">
+            💼
+          </div>
+
+          <h3 className="mt-4 text-sm font-semibold text-white transition group-hover:text-[#0f9f9c]">
+            AI Cover Letter Generator
+          </h3>
+
+          <p className="mt-2 text-xs leading-6 text-zinc-500">
+            Create personalized cover letters for your job applications.
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+
+    {/* FOOTER MAIN */}
+
+    <div className="border-t border-white/5 pt-8">
+
+      <div className="flex flex-col items-center justify-between gap-5 text-center sm:flex-row sm:text-left">
+
+        <div className="flex items-center gap-3">
+
+          <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border border-[#0f9f9c]/20">
+
+            <img
+              src="/logo.png"
+              alt="KrishAIWorks"
+              className="h-full w-full rounded-full object-cover"
+            />
 
           </div>
 
-          <p className="text-xs text-zinc-600">
-            © 2026 KrishAIWorks. All rights reserved.
-          </p>
+          <div>
+
+            <p className="text-sm font-bold text-white">
+              KrishAIWorks
+            </p>
+
+            <p className="text-xs text-zinc-600">
+              AI Solutions That Work
+            </p>
+
+          </div>
 
         </div>
 
-      </footer>
+        <p className="text-xs text-zinc-600">
+          © {new Date().getFullYear()} KrishAIWorks. All rights reserved.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
 
     </main>
   );
