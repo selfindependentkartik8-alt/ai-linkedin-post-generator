@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ailinkedinpostgenerator.krishaiworks.com"),
+  metadataBase: new URL(
+    "https://ailinkedinpostgenerator.krishaiworks.com"
+  ),
 
   title: "AI LinkedIn Post Generator | Create Engaging LinkedIn Posts",
   description:
@@ -63,6 +65,74 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://krishaiworks.com/#organization",
+      name: "KrishAIWorks",
+      url: "https://krishaiworks.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://krishaiworks.com/logo.png",
+        width: 512,
+        height: 512,
+      },
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://krishaiworks.com/#website",
+      url: "https://krishaiworks.com",
+      name: "KrishAIWorks",
+      description:
+        "AI-powered tools, productivity utilities, automation, chatbots, websites and custom digital solutions.",
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+      inLanguage: "en",
+    },
+
+    {
+      "@type": "WebApplication",
+      "@id":
+        "https://ailinkedinpostgenerator.krishaiworks.com/#webapplication",
+      name: "AI LinkedIn Post Generator",
+      url: "https://ailinkedinpostgenerator.krishaiworks.com/",
+      description:
+        "Generate professional LinkedIn posts, engaging hooks, and relevant hashtags with AI. Create LinkedIn content in seconds with KrishAIWorks.",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Any",
+      browserRequirements: "Requires a modern web browser.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      publisher: {
+        "@id": "https://krishaiworks.com/#organization",
+      },
+    },
+
+    {
+      "@type": "WebPage",
+      "@id":
+        "https://ailinkedinpostgenerator.krishaiworks.com/#webpage",
+      url: "https://ailinkedinpostgenerator.krishaiworks.com/",
+      name: "AI LinkedIn Post Generator | Create Engaging LinkedIn Posts",
+      description:
+        "Generate professional LinkedIn posts, engaging hooks, and relevant hashtags with AI. Create LinkedIn content in seconds with KrishAIWorks.",
+      isPartOf: {
+        "@id": "https://krishaiworks.com/#website",
+      },
+      about: {
+        "@id":
+          "https://ailinkedinpostgenerator.krishaiworks.com/#webapplication",
+      },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -72,6 +142,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
 
         {/* Google Analytics */}
         <Script
